@@ -8,6 +8,12 @@ A new Flutter project.
 flutter create gojek_ui
 ```
 
+## Result
+1. part 1 [bottom navbar dan appbar]
+<p align="center">
+  <img src="./part-1-gojek-ui.png" width="320" alt="Nest Logo" />
+</p>
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
