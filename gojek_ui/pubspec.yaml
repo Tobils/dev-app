@@ -51,6 +51,11 @@ flutter:
     - assets/icons/icon_saldo.png
     - assets/icons/icon_scan.png
     - assets/icons/icon_transfer.png
+    - assets/gofoodmenu/food_1.jpg
+    - assets/gofoodmenu/food_2.jpg
+    - assets/gofoodmenu/food_3.jpg
+    - assets/gofoodmenu/food_4.jpg
+    - assets/gofoodmenu/food_5.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

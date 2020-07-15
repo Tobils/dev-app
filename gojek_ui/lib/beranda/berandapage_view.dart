@@ -10,11 +10,25 @@ class BerandaPage extends StatefulWidget {
 
 class _BerandaPageState extends State<BerandaPage> {
   List<GojekService> _gojekServiceList = [];
+  List<Food> _goFoodFeaturedList = [];
 
   @override
   void initState() {
     super.initState();
 
+    /* inisiasi go food service */
+    _goFoodFeaturedList.add(new Food(
+        title: "Steak Andakar", image: "assets/gofoodmenu/food_1.jpg"));
+    _goFoodFeaturedList.add(new Food(
+        title: "Mie Ayam Tumini", image: "assets/gofoodmenu/food_2.jpg"));
+    _goFoodFeaturedList.add(new Food(
+        title: "Tengkleng Hohah", image: "assets/gofoodmenu/food_3.jpg"));
+    _goFoodFeaturedList.add(
+        new Food(title: "Warung Steak", image: "assets/gofoodmenu/food_4.jpg"));
+    _goFoodFeaturedList.add(new Food(
+        title: "Warung Banjar", image: "assets/gofoodmenu/food_5.jpg"));
+
+    /* inisiasi gojek service list */
     _gojekServiceList.add(new GojekService(
         image: Icons.directions_bike,
         color: GojekPalette.menuRide,
@@ -76,7 +90,13 @@ class _BerandaPageState extends State<BerandaPage> {
                     _buildGojekServicesMenu(),
                   ],
                 ),
-              )
+              ),
+              new Container(
+                  color: Colors.white,
+                  margin: EdgeInsets.only(top: 16.0),
+                  child: new Column(
+                    children: <Widget>[_buildGoFoodFeatured()],
+                  ))
             ],
           ),
         ),
@@ -233,6 +253,62 @@ class _BerandaPageState extends State<BerandaPage> {
           ),
           new Padding(padding: EdgeInsets.only(top: 6.0)),
           new Text(gojekService.title, style: new TextStyle(fontSize: 10.0))
+        ],
+      ),
+    );
+  }
+
+  Widget _buildGoFoodFeatured() {
+    return new Container(
+      padding: EdgeInsets.fromLTRB(16.0, 16.0, 0.0, 16.0),
+      child: new Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          new Text(
+            "GO-FOOD",
+            style: new TextStyle(fontFamily: "NeoSansBold"),
+          ),
+          new Padding(
+            padding: EdgeInsets.only(top: 8.0),
+          ),
+          new Text(
+            "Pilihan Terlaris",
+            style: new TextStyle(fontFamily: "NeoSansBold"),
+          ),
+          new SizedBox(
+            height: 172.0,
+            child: new ListView.builder(
+              itemCount: _goFoodFeaturedList.length,
+              padding: EdgeInsets.only(top: 12.0),
+              physics: new ClampingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return _rowGoFoodFeatured(_goFoodFeaturedList[index]);
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _rowGoFoodFeatured(Food food) {
+    return new Container(
+      margin: EdgeInsets.only(right: 16.0),
+      child: new Column(
+        children: <Widget>[
+          new ClipRRect(
+            borderRadius: new BorderRadius.circular(8.0),
+            child: new Image.asset(
+              food.image,
+              width: 132.0,
+              height: 132.0,
+            ),
+          ),
+          new Padding(
+            padding: EdgeInsets.only(top: 8.0),
+          ),
+          new Text(food.title)
         ],
       ),
     );
