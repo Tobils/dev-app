@@ -14,6 +14,11 @@ flutter create gojek_ui
   <img src="./part-1-gojek-ui.png" width="320" alt="Nest Logo" />
 </p>
 
+2. part 2 - gojek services
+<p align="center">
+  <img src="./gojek-service.png" width="320" alt="Nest Logo" />
+</p>
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
