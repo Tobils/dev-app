@@ -5,9 +5,17 @@ A new Flutter project.
 ## Getting Started
 ```bash
 # create project
-flutter create gojek_ui
-
+flutter create food_delivery_ui
 ```
+
+## Progress
+1. Appbar
+<p align="center">
+  <img src="./screen-shot/appbar-search-panel.png" width="320" alt="Nest Logo" />
+</p>
+
+## Triks
+- ketikan stf untuk membuat shortcut stateles state view
 
 This project is a starting point for a Flutter application.
 

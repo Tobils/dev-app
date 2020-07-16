@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gojek_ui/akun/akun_view.dart';
 import 'package:gojek_ui/beranda/berandapage_view.dart';
 import 'package:gojek_ui/constant.dart';
+import 'package:gojek_ui/inbox/inbox_view.dart';
+import 'package:gojek_ui/pesanan/pesanan_view.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -11,6 +14,9 @@ class _LandingPageState extends State<LandingPage> {
   int _bottomNavCurrentIndex = 0;
   List<Widget> _container = [
     new BerandaPage(),
+    new PesananPage(),
+    new InboxPage(),
+    new AkunPage()
   ];
 
   @override
