@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_ui/data/data.dart';
+import 'package:food_delivery_ui/widgets/recent_orders.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -48,7 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         size: 30.0,
                       ),
                       suffixIcon: IconButton(
-                          icon: Icon(Icons.clear), onPressed: () {}))))
+                          icon: Icon(Icons.clear), onPressed: () {})))),
+          RecentOrders(),
         ],
       ),
     );

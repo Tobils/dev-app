@@ -14,6 +14,11 @@ flutter create food_delivery_ui
   <img src="./screen-shot/appbar-search-panel.png" width="320" alt="Nest Logo" />
 </p>
 
+2. Adding Recent Orders
+<p align="center">
+  <img src="./screen-shot/recent-orders.png" width="320" alt="Nest Logo" />
+</p>
+
 ## Triks
 - ketikan stf untuk membuat shortcut stateles state view
 
