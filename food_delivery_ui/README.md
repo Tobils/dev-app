@@ -20,7 +20,7 @@ flutter create food_delivery_ui
 </p>
 
 ## Triks
-- ketikan stf untuk membuat shortcut stateles state view
+- ketikan stf untuk membuat shortcut stateles full dan stt untuk state less
 
 This project is a starting point for a Flutter application.
 
