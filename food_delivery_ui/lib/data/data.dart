@@ -69,6 +69,14 @@ final _restaurant4 = Restaurant(
   menu: [_burito, _ramen, _pancakes, _burger, _salmon],
 );
 
+final List<Restaurant> restaurants = [
+  _restaurant0,
+  _restaurant1,
+  _restaurant2,
+  _restaurant3,
+  _restaurant4,
+];
+
 // User
 final currentUser = User(name: 'Frika', orders: [
   Order(
