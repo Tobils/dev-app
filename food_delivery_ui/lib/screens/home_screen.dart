@@ -83,50 +83,88 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.account_circle),
-          iconSize: 36.0,
-          onPressed: () {},
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     icon: Icon(Icons.account_circle),
+      //     iconSize: 36.0,
+      //     onPressed: () {},
+      //   ),
+      //   title: Center(
+      //     child: Text("Food Delivery"),
+      //   ),
+      //   actions: <Widget>[
+      //     FlatButton(
+      //         child: Text('Cart (${currentUser.cart.length})',
+      //             style: TextStyle(color: Colors.white, fontSize: 20.0)),
+      //         onPressed: () => Navigator.push(
+      //               context,
+      //               MaterialPageRoute(
+      //                 builder: (_) => CartScreen(),
+      //               ),
+      //             )),
+      //   ],
+      // ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton.extended(
+        elevation: 4.0,
+        icon: const Icon(Icons.add),
+        label: const Text('Food Delivery'),
+        onPressed: () {},
+      ),
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        notchMargin: 4.0,
+        child: new Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.account_circle),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.payment),
+              onPressed: () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => CartScreen(),
+                  ),
+                )
+              },
+            ),
+          ],
         ),
-        title: Text("Food Delivery"),
-        actions: <Widget>[
-          FlatButton(
-              child: Text('Cart (${currentUser.cart.length})',
-                  style: TextStyle(color: Colors.white, fontSize: 20.0)),
-              onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => CartScreen(),
-                    ),
-                  )),
-        ],
       ),
       body: ListView(
         children: <Widget>[
           // search field
           Padding(
-              padding: EdgeInsets.all(20.0),
-              child: TextField(
-                  decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical: 15.0),
-                      fillColor: Colors.white,
-                      filled: true,
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          borderSide: BorderSide(width: 0.8)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          borderSide: BorderSide(
-                              width: 0.8,
-                              color: Theme.of(context).primaryColor)),
-                      hintText: "Cari Makanan atau Restoran",
-                      prefixIcon: Icon(
-                        Icons.search,
-                        size: 30.0,
-                      ),
-                      suffixIcon: IconButton(
-                          icon: Icon(Icons.clear), onPressed: () {})))),
+            padding: EdgeInsets.all(20.0),
+            child: TextField(
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.symmetric(vertical: 15.0),
+                fillColor: Colors.white,
+                filled: true,
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                    borderSide: BorderSide(width: 0.8)),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                    borderSide: BorderSide(
+                        width: 0.8, color: Theme.of(context).primaryColor)),
+                hintText: "Cari Makanan atau Restoran",
+                prefixIcon: Icon(
+                  Icons.search,
+                  size: 30.0,
+                ),
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.clear),
+                  onPressed: () {},
+                ),
+              ),
+            ),
+          ),
           RecentOrders(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
