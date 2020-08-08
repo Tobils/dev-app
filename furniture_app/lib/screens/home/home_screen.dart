@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_app/constants.dart';
+import 'package:furniture_app/screens/home/components/body.dart';
 import 'package:furniture_app/size_config.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
+      body: Body(), // go to body
     );
   }
 
@@ -35,7 +37,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: SizeConfig.defaultSize,
+          width: 10,
         )
       ],
     );
